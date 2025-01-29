@@ -184,7 +184,7 @@ def batch_product_details(*args, **kwargs) -> BatchProductDetailsResponse:
         raise DigikeyError('Please provide a valid BatchProductDetailsRequest argument')
 
 def product_barcode(*args, **kwargs) -> ProductBarcodeResponse:
-    client = DigikeyApiWrapper('product_barcode', digikey.v3.barcoding)
+    client = DigikeyApiWrapper('product_barcode_with_http_info', digikey.v3.barcoding)
 
     if len(args):
         logger.info(f'Get Barcode details for: {args[0]}')
